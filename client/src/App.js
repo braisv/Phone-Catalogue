@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import PhoneGrid from "./Components/PhoneGrid";
+import { fetchData } from "./actions/fetchData";
+import { connect } from "react-redux";
+import NavBar from "./Components/NavBar";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  componentDidMount() {
+    this.props.dispatch(fetchData());
+  }
+
+  render() {
+    return (
+      <div className="App container">
+        <div className="bg"></div>
+        <div className="bg bg2"></div>
+        <div className="bg bg3"></div>
+        <NavBar />
+        <div className="content">
+          <PhoneGrid />
+        </div>
+      </div>
+    );
+  }
 }
 
-export default App;
+const mapStateToProps = state => ({
+  phones: state.phones,
+  loading: state.loading,
+  error: state.error
+});
+
+export default connect(mapStateToProps)(App);
