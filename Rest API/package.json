@@ -1,0 +1,25 @@
+{
+  "name": "phonecatalogue",
+  "version": "1.0.0",
+  "description": "list of phones",
+  "main": "app.js",
+  "scripts": {
+    "start": "node_modules/.bin/nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/braisv/Phone-Catalogue.git"
+  },
+  "author": "braisv",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/braisv/Phone-Catalogue/issues"
+  },
+  "homepage": "https://github.com/braisv/Phone-Catalogue#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
