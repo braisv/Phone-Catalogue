@@ -5,7 +5,7 @@ import "./PhonePic.scss"
 const PhonePic = ({ phone }) => {
     return (
         <div className="grid-photo-wrap flex" >
-        <Link to={`/restaurant/${phone.id}`} phone={phone}>
+        <Link to={`/phone/${phone.id}`}>
             {phone.imageFileName ? <img src={`/images/${phone.imageFileName}`} alt={phone.name} className="grid-photo" /> : <div>{phone.name}</div>}
         </Link>
     </div>

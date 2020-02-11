@@ -1,9 +1,9 @@
 .grid-photo-wrap {
-    background: #eaeaea;
+    background: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 200px;
+    height: 250px;
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -15,8 +15,8 @@
     
     img {
         position: absolute;
-        width: 100%;
-        min-height: 100%;
+        max-width: 100%;
+        max-height: 100%;
         top: 50%;     
         left: 50%;
         transform: translate( -50%, -50%);
