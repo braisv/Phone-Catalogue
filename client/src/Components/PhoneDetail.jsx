@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import "./PhoneDetail.scss"
+import "./PhoneDetail.scss";
 
 const PhoneDetail = () => {
   const { phones } = useSelector(state => {
@@ -18,16 +18,27 @@ const PhoneDetail = () => {
   }, [phone, phones, params]);
 
   return (
-    <div class="parent">
-      <div class="div1 flex">{phone.manufacturer}</div>
-      <div class="div2 flex">{phone.name}</div>
-      <div class="div3 flex">{phone.color}</div>
-      <div class="div4 flex">{phone.price}</div>
-      <div class="div5 flex">{phone.screen}</div>
-      <div class="div6 flex">{phone.processor}</div>
-      <div class="div7 flex">{phone.ram}</div>
-      <div class="div8"><img src={`/images/${phone.imageFileName}`} alt={phone.name} className="grid-detail" /></div>
-      <div class="div9 flex">{phone.description}</div>
+    <div className="phone-detail flex-column">
+      <div className="div1 flex">{phone.manufacturer}</div>
+      <div className="div2 flex">{phone.name}</div>
+      <div className="div8">
+        <img
+          src={`/images/${phone.imageFileName}`}
+          alt={phone.name}
+          classNameName="grid-detail"
+        />
+      </div>
+      <div className="features-phone flex-column">
+        Features:
+        <div className="feature-section flex">
+          <div className="feature">Color: {phone.color}</div>
+          <div className="feature">Price: {phone.price}$</div>
+          <div className="feature">Screen: {phone.screen}</div>
+          <div className="feature">Processor: {phone.processor}</div>
+          <div className="feature">Ram: {phone.ram}</div>
+        </div>
+      </div>
+      <div className="div9 flex">{phone.description}</div>
     </div>
   );
 };
