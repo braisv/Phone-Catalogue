@@ -1,5 +1,7 @@
 .phone-detail {
     font-size: 1rem;
+    max-width: 450px;
+    margin: 0 auto;
 
     .div1 {
         background: black;
@@ -22,11 +24,17 @@
         color: white;
         padding: 5px;
 
+        svg {
+            margin: 0 10px;
+        }
+
         .feature-section {
-            display: none;
             flex-wrap: wrap;
             justify-content: flex-start;
-            margin: 10px;
+            margin: 0;
+            height: 0;
+            opacity: 0;
+            transition: height 0.5s ease;
 
             .feature {
                 text-align: left;
@@ -43,4 +51,11 @@
         margin: 10px;
     }
 }
+
+@media screen and (min-width: 576px) {
+    .phone-detail {
+      border: 1px solid rgba(0, 0, 0, 0.219);
+      box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.3);
+    }
+  }
 
