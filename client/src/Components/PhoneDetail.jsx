@@ -37,6 +37,12 @@ const PhoneDetail = () => {
     }
   }
 
+  if (!phone)
+  return (
+    <div className="spinner">
+      <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
+  );
   return (
     <div className="phone-detail flex-column">
       <div className="div1 flex">{phone.manufacturer}</div>

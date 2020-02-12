@@ -5,6 +5,12 @@ import "./PhoneGrid.scss"
 
 const PhoneGrid = ({ phones }) => {
 
+  if (!phones[0])
+  return (
+    <div className="spinner">
+      <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
+  );
   return (
        <div className="phones-grid">
         {phones.map((phone, i) => (
