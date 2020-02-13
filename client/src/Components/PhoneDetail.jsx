@@ -40,18 +40,17 @@ const PhoneDetail = () => {
   if (!phone)
   return (
     <div className="spinner">
-      <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+      <div className="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     </div>
   );
   return (
     <div className="phone-detail flex-column">
-      <div className="div1 flex">{phone.manufacturer}</div>
-      <div className="div2 flex">{phone.name}</div>
-      <div className="div8">
+      <div className="manufacturer-name flex">{phone.manufacturer}</div>
+      <div className="phone-name flex">{phone.name}</div>
+      <div className="image">
         <img
           src={`/images/${phone.imageFileName}`}
           alt={phone.name}
-          classNameName="grid-detail"
         />
       </div>
       <div
@@ -74,7 +73,7 @@ const PhoneDetail = () => {
           </div>
 
       </div>
-      <div className="div9 flex">{phone.description}</div>
+      <div className="description-phone flex">{phone.description}</div>
     </div>
   );
 };

@@ -8,7 +8,7 @@ const PhoneGrid = ({ phones }) => {
   if (!phones[0])
   return (
     <div className="spinner">
-      <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+      <div className="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     </div>
   );
   return (

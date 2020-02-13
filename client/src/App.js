@@ -10,9 +10,7 @@ class App extends React.Component {
     this.props.dispatch(fetchData());
   }
 
-  render() {
-    console.log("APP PROPS: ", this.props)
-    
+  render() {  
     return (
       <div className="App container">
         <div className="bg"></div>
