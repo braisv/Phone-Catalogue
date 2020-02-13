@@ -11,7 +11,7 @@ app.listen(port, () => {
   console.log(`Serving running at http://${hostname}:${port}/`);
 });
 
-let whitelist = ['http://localhost:5000', 'http://localhost:3000', 'https://wherever-eat-takes.herokuapp.com'];
+let whitelist = ['http://localhost:5000', 'http://localhost:3000'];
 
 let corsOptions = {
   origin: function(origin, callback) {
